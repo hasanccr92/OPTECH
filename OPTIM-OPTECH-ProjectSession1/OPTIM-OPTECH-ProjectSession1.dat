@@ -1,0 +1,182 @@
+##############################################################
+##     OPTIM:  DATA FILE FOR PROJECT SESSION I              ##    
+##                                                          ##
+##############################################################
+
+
+##############################################################
+#   Set of demands source, destination, traffic demand       #
+##############################################################
+param: D: source destination demand :=
+1 Barcelona Berlin 10000
+2 Barcelona Paris 10000
+;
+
+
+##############################################################
+#   V: set of nodes with city name and geographic locations  #
+##############################################################
+param:  V:  latitude    longitude:=
+
+  Amsterdam  		4.90 	52.35 
+  Athens 		23.73 	38.00
+  Barcelona 		2.18 	41.37 
+  Belgrade 		20.50 	44.83 
+  Berlin 		13.40 	52.52
+  Birmingham 		-1.88 	52.4
+  Bordeaux 		-0.57   44.85
+  Brussels 		4.35 	50.83
+  Budapest 		19.08 	47.50
+  Copenhagen 		12.57 	55.72
+  Dublin  		-6.25 	53.33
+  Dusseldorf  		6.78 	51.23 
+  Frankfurt  		8.67 	50.10 
+  Glasgow  		-4.25 	55.85 
+  Hamburg  		10.02 	53.55 
+  Helsinki  		24.97 	60.17 
+  Krakow  		19.95 	50.05 
+  Lisbon  		-9.13 	38.73 
+  London  		-0.17 	51.50 
+  Lyon  		4.83 	45.73 
+  Madrid  		-3.72 	40.42 
+  Marseille  		5.37 	43.30 
+  Milan  		9.17 	45.47 
+  Munich  		11.57 	48.13 
+  Oslo  		10.75 	59.93 
+  Palermo  		13.35 	38.12 
+  Paris  		2.33 	48.87 
+  Prague  		14.43 	50.08 
+  Rome  		12.50 	41.88 
+  Seville  		-5.98 	37.38 
+  Sofia  		23.33 	42.75 
+  Stockholm  		18.05 	59.33 
+  Strasbourg  		7.77 	48.58 
+  Vienna  		16.37 	48.22 
+  Warsaw  		21.00 	52.25 
+  Zagreb  		16.02 	45.83 
+  Zurich  		8.55 	47.38 
+;
+
+##############################################################
+# E: set of links i,j between nodes i and j, and their       #
+# capacity  and cost                                         #
+##############################################################
+param : E:  capacity    cost   :=
+
+  Amsterdam 	Brussels  	23310.00 	2.59  
+  Amsterdam 	Glasgow  	96030.00 	10.67 
+  Amsterdam 	Hamburg  	49680.00 	5.52
+  Amsterdam 	London  	48600.00 	5.40 
+  Athens 	Palermo  	122670.00 	13.63 
+  Athens 	Sofia  		71460.00 	7.94 
+  Athens 	Zagreb  	135000.00 	15.00 
+  Barcelona     Madrid		68400.00	7.60
+  Barcelona 	Marseille  	45720.00 	5.08 
+  Barcelona 	Seville  	111960.00 	12.44  
+  Belgrade 	Budapest  	42660.00 	4.74 
+  Belgrade 	Sofia  		43830.00 	4.87 
+  Belgrade 	Zagreb  	49590.00 	5.51 
+  Berlin 	Copenhagen 	48600.00 	5.40 
+  Berlin 	Hamburg 	34290.00 	3.81 
+  Berlin 	Munich 		68130.00 	7.57 
+  Berlin 	Prague  	37800.00	4.20 
+  Berlin 	Warsaw 		69750.00 	7.75 
+  Birmingham 	Glasgow  	54900.00 	6.10
+  Birmingham 	London 		21510.00 	2.39 
+  Bordeaux 	Madrid 		75060.00 	8.34 
+  Bordeaux 	Marseille 	68040.00 	7.56 
+  Bordeaux 	Paris 		67230.00 	7.47 
+  Brussels	Amsterdam	23310.00	2.59
+  Brussels 	Dusseldorf 	23760.00 	2.64 
+  Brussels 	Paris 		35370.00 	3.93 
+  Budapest  	Belgrade 	42660.00 	4.74 
+  Budapest 	Krakow 		39240.00 	4.36 
+  Budapest 	Prague 		60120.00 	6.68
+  Copenhagen  	Berlin 	 	48600.00 	5.40 
+  Copenhagen 	Oslo  		64980.00 	7.22 
+  Copenhagen 	Stockholm  	69930.00 	7.77
+  Dublin 	Glasgow 	41580.00 	4.62 
+  Dublin 	London  	62100.00 	6.90 
+  Dusseldorf	Brussels 	23760.00 	2.64 
+  Dusseldorf 	Frankfurt  	24750.00 	2.75
+  Frankfurt     Dusseldorf 	24750.00 	2.75
+  Frankfurt 	Hamburg  	53280.00 	5.92 
+  Frankfurt 	Munich  	41040.00 	4.56
+  Frankfurt 	Strasbourg  	24390.00 	2.71 
+  Glasgow       Amsterdam 	96030.00 	10.67 
+  Glasgow  	Birmingham  	54900.00 	6.10
+  Glasgow    	Dublin 	 	41580.00 	4.62 
+  Hamburg  	Amsterdam 	49680.00 	5.52
+  Hamburg    	Berlin 	 	34290.00 	3.81 
+  Hamburg      	Frankfurt 	53280.00 	5.92 
+  Helsinki 	Oslo  		106380.00 	11.82 
+  Helsinki 	Stockholm  	53730.00 	5.97 
+  Helsinki 	Warsaw  	123300.00 	13.70
+  Krakow  	Budapest 	39240.00 	4.36 
+  Krakow 	Warsaw 		34470.00 	3.83
+  Lisbon 	London  	177930.00 	19.77
+  Lisbon 	Madrid 		67590.00 	7.51 
+  Lisbon 	Seville  	42390.00	4.71
+  London	Amsterdam 	48600.00 	5.40
+  London    	Birmingham 	21510.00 	2.39  
+  London      	Dublin 	  	62100.00 	6.90 
+  London        Lisbon 	  	177930.00 	19.77
+  London 	Paris  		46260.00 	5.14
+  Lyon 		Marseille 	36990.00 	4.11
+  Lyon 		Paris  		53460.00 	5.94 
+  Lyon 		Zurich  	45630.00 	5.07 
+  Madrid        Barcelona 	68400.00	7.60
+  Madrid	Bordeaux	75060.00 	8.34 
+  Madrid        Lisbon 	 	67590.00 	7.51 
+  Marseille	Barcelona 	45720.00 	5.08 
+  Marseille     Bordeaux 	68040.00 	7.56 
+  Marseille     Lyon 	 	36990.00 	4.11
+  Marseille 	Rome  		81630.00 	9.07 
+  Milan 	Munich  	46980.00	5.22 
+  Milan 	Rome  		64800.00 	7.20 
+  Milan 	Zurich  	29430.00 	3.27
+  Munich  	Berlin 	 	68130.00 	7.57 
+  Munich    	Frankfurt 	41040.00 	4.56
+  Munich     	Milan 	  	46980.00	5.22 
+  Munich 	Vienna  	48060.00 	5.34 
+  Oslo    	Copenhagen 	64980.00 	7.22 
+  Oslo      	Helsinki 	106380.00 	11.82 
+  Palermo       Athens 	  	122670.00 	13.63 
+  Palermo 	Rome  		57420.00 	6.38
+  Paris		Bordeaux 	67230.00 	7.47     
+  Paris 	Brussels 	35370.00 	3.93 
+  Paris		London 	  	46260.00 	5.14
+  Paris		Lyon 		53460.00 	5.94 
+  Paris 	Strasbourg  	54000.00 	6.00
+  Prague    	Berlin 	  	37800.00	4.20 
+  Prague    	Budapest 	60120.00 	6.68
+  Prague 	Vienna  	33840.00 	3.76
+  Rome   	Marseille 	81630.00 	9.07 
+  Rome    	Milan 	  	64800.00 	7.20 
+  Rome     	Palermo 	57420.00 	6.38
+  Rome 		Zagreb 		70470.00 	7.83
+  Seville  	Barcelona 	111960.00 	12.44  
+  Seville    	Lisbon 	  	42390.00	4.71
+  Sofia  	Athens 	  	71460.00 	7.94 
+  Sofia   	Belgrade 	43830.00 	4.87   
+  Stockholm     Copenhagen 	69930.00 	7.77
+  Stockholm     Helsinki 	53730.00 	5.97 
+  Strasbourg    Frankfurt   	24390.00 	2.71 
+  Strasbourg	Paris 	  	54000.00 	6.00
+  Strasbourg 	Zurich  	19620.00 	2.18
+  Vienna	Zagreb  	36000.00 	4.00  
+  Vienna  	Munich 	  	48060.00 	5.34 
+  Vienna    	Prague 	  	33840.00 	3.76  
+  Warsaw    	Berlin 	 	69750.00 	7.75 
+  Warsaw    	Helsinki 	123300.00 	13.70
+  Warsaw    	Krakow 	 	34470.00 	3.83
+  Zagreb  	Athens  	135000.00 	15.00
+  Zagreb  	Belgrade	49590.00 	5.51
+  Zagreb  	Rome  		70470.00 	7.83
+  Zagreb  	Vienna	  	36000.00 	4.00  
+  Zurich	Lyon 		45630.00 	5.07 
+  Zurich    	Milan 	  	29430.00 	3.27
+  Zurich    	Strasbourg 	19620.00 	2.18
+  ;
+
+
