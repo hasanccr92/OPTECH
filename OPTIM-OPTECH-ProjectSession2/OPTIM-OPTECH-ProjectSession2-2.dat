@@ -1,0 +1,115 @@
+##############################################################
+##    OPTIM/OPTECH:  DATA FILE 2 FOR PROJECT SESSION II     ##
+##############################################################
+
+param b:=0.2;  # link load from which the link cost increases
+
+param lamb:=7; # lambda constant factor
+
+
+# Parameters for the linearization procedures
+param M:= 1;
+param epsilon:= 0.1;
+param H:=1000;
+
+##############################################################
+#   Set of demands source, destination, traffic demand       #
+##############################################################
+param: D: source destination demand :=
+1 Barcelona Rome 15000
+2 Barcelona Paris 15000
+;
+
+
+##############################################################
+#   V: set of nodes with city name and geographic locations  #
+##############################################################
+param:  V:  latitude    longitude:=
+
+  Amsterdam  	4.90 	52.35 
+  Barcelona 	2.18 	41.37 
+  Berlin 		13.40 	52.52
+  Bordeaux 		-0.57   44.85
+  Brussels 		4.35 	50.83
+  Dusseldorf  	6.78 	51.23 
+  Frankfurt  	8.67 	50.10 
+  Hamburg  		10.02 	53.55 
+  Lyon  		4.83 	45.73 
+  Madrid  		-3.72 	40.42 
+  Marseille  	5.37 	43.30 
+  Milan  		9.17 	45.47 
+  Munich  		11.57 	48.13 
+  Paris  		2.33 	48.87 
+  Prague  		14.43 	50.08 
+  Rome  		12.50 	41.88 
+  Strasbourg  	7.77 	48.58 
+  Vienna  		16.37 	48.22 
+  Zagreb  		16.02 	45.83 
+  Zurich  		8.55 	47.38 
+;
+
+##############################################################
+# E: set of links i,j between nodes i and j, and their       #
+# capacity  and cost                                         #
+##############################################################
+param : E:  capacity   :=
+
+  Amsterdam 	Brussels  	23310.00 
+  Amsterdam 	Hamburg  	49680.00
+  Barcelona     Madrid		68400.00
+  Barcelona 	Marseille  	75060.00
+  Berlin 		Hamburg 	34290.00
+  Berlin 		Munich 		68130.00
+  Berlin 		Prague  	37800.00
+  Bordeaux 		Madrid 		75060.00
+  Bordeaux 		Marseille 	68040.00
+  Bordeaux 		Paris 		67230.00 
+  Brussels		Amsterdam	23310.00
+  Brussels 		Dusseldorf 	23760.00
+  Brussels 		Paris 		35370.00
+  Dusseldorf	Brussels 	23760.00 
+  Dusseldorf 	Frankfurt  	24750.00
+  Frankfurt     Dusseldorf 	24750.00
+  Frankfurt 	Hamburg  	53280.00 
+  Frankfurt 	Munich  	41040.00
+  Frankfurt 	Strasbourg  24390.00 
+  Hamburg  		Amsterdam 	49680.00
+  Hamburg    	Berlin 	 	34290.00 
+  Hamburg      	Frankfurt 	53280.00 
+  Lyon 			Marseille 	75060.00
+  Lyon 			Paris  		75060.00 
+  Lyon 			Zurich  	45630.00 
+  Madrid        Barcelona   68400.00
+  Madrid		Bordeaux	75060.00 
+  Marseille		Barcelona 	75060.00 
+  Marseille     Bordeaux 	68040.00 
+  Marseille     Lyon 	 	75060.00
+  Marseille 	Rome  		81630.00 
+  Milan 		Munich  	46980.00 
+  Milan 		Rome  		64800.00 
+  Milan 		Zurich  	29430.00
+  Munich  		Berlin 	 	68130.00 
+  Munich    	Frankfurt 	41040.00
+  Munich     	Milan 	  	46980.00 
+  Munich 		Vienna  	48060.00 
+  Paris			Bordeaux 	67230.00     
+  Paris 		Brussels 	35370.00 
+  Paris			Lyon 		75060.00 
+  Paris 		Strasbourg  54000.00
+  Prague    	Berlin 	  	37800.00 
+  Prague 		Vienna  	33840.00
+  Rome   		Marseille 	81630.00 
+  Rome    		Milan 	  	64800.00 
+  Rome 			Zagreb 		70470.00
+  Strasbourg    Frankfurt   24390.00 
+  Strasbourg	Paris 	  	54000.00
+  Strasbourg 	Zurich  	19620.00
+  Vienna		Zagreb  	36000.00  
+  Vienna  		Munich 	  	48060.00 
+  Vienna    	Prague 	  	33840.00  
+  Zagreb  		Rome  		70470.00
+  Zagreb  		Vienna	  	36000.00  
+  Zurich		Lyon 		45630.00 
+  Zurich        Milan 	  	29430.00
+  Zurich        Strasbourg 	19620.00
+  ;
